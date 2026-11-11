@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Auto Dark Mode for Gmail &amp; Sheets</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 { color: #000; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: #444; margin-top: 30px; }
+        p { margin-bottom: 15px; }
+        .lang-switch { text-align: right; margin-bottom: 20px; }
+        .lang-switch a { color: #0066cc; text-decoration: none; cursor: pointer; }
+        .english { display: none; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <a onclick="switchLang('ja')">日本語</a> | <a onclick="switchLang('en')">English</a>
+    </div>
+
+    <div class="container ja" id="content-ja">
+        <h1>プライバシーポリシー</h1>
+        <p>「Auto Dark Mode for Gmail &amp; Sheets」（以下「本拡張機能」）のプライバシーポリシーを以下の通り定めます。</p>
+
+        <h2>1. 個人情報の収集について</h2>
+        <p>本拡張機能は、ユーザーの個人情報（氏名、メールアドレス、メールやスプレッドシートの内容、閲覧履歴など）を一切収集しません。</p>
+
+        <h2>2. データの利用目的</h2>
+        <p>本拡張機能は、Gmail と Google スプレッドシートのページの色を、端末のダークモード設定に合わせて切り替えるためだけに動作します。ページの内容を読み取ったり、書き換えたりすることはありません。</p>
+
+        <h2>3. 保存するデータ</h2>
+        <p>本拡張機能は、次の設定だけをユーザーのブラウザ内（chrome.storage.local）に保存します。</p>
+        <ul>
+            <li>Gmail と Google スプレッドシートのそれぞれで本拡張機能を使うかどうか</li>
+            <li>手動で切り替えた表示（ダークまたはライト）と、切り替えた時点の端末の設定</li>
+        </ul>
+        <p>これらの設定は、本拡張機能を削除すると消えます。</p>
+
+        <h2>4. 外部へのデータ送信</h2>
+        <p>本拡張機能がユーザーのデータを外部サーバーに送信することはありません。</p>
+
+        <h2>5. ポリシーの変更</h2>
+        <p>本ポリシーの内容は、必要に応じて変更されることがあります。変更後のポリシーは本ページに掲載された時点から効力を生じるものとします。</p>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+        <p style="font-size: 0.9em; color: #666;">Gmail および Google スプレッドシートは Google LLC の商標です。</p>
+        <p style="font-size: 0.9em; color: #666;">最終更新日: 2026年11月12日</p>
+    </div>
+
+    <div class="container english" id="content-en">
+        <h1>Privacy Policy</h1>
+        <p>This Privacy Policy describes how "Auto Dark Mode for Gmail &amp; Sheets" (referred to as "the Extension") handles your information.</p>
+
+        <h2>1. Information Collection</h2>
+        <p>The Extension does not collect any personal information (such as name, email address, the content of your emails or spreadsheets, or browsing history).</p>
+
+        <h2>2. Use of Information</h2>
+        <p>The Extension only functions to switch the colors of Gmail and Google Sheets pages to match your device's dark mode setting. It does not read or modify the content of the pages.</p>
+
+        <h2>3. Stored Data</h2>
+        <p>The Extension stores only the following settings locally in your browser (chrome.storage.local):</p>
+        <ul>
+            <li>Whether the Extension is used on Gmail and on Google Sheets</li>
+            <li>The display you switched to manually (dark or light) and the device setting at that time</li>
+        </ul>
+        <p>These settings are removed when you uninstall the Extension.</p>
+
+        <h2>4. Data Transmission</h2>
+        <p>The Extension does not transmit any user data to external servers.</p>
+
+        <h2>5. Changes to This Policy</h2>
+        <p>This policy may be updated from time to time. Any changes will be posted on this page and will take effect immediately upon posting.</p>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+        <p style="font-size: 0.9em; color: #666;">Gmail and Google Sheets are trademarks of Google LLC.</p>
+        <p style="font-size: 0.9em; color: #666;">Last Updated: November 12, 2026</p>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            if (lang === 'ja') {
+                document.getElementById('content-ja').style.display = 'block';
+                document.getElementById('content-en').style.display = 'none';
+            } else {
+                document.getElementById('content-ja').style.display = 'none';
+                document.getElementById('content-en').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
