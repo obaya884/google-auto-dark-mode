@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build Output
+dist/
+*.zip
+
+# Documentation
+notes/
+promo/
+
+# System Files
+.DS_Store
+Thumbs.db
