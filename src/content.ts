@@ -39,6 +39,12 @@ if (site) {
 
   refresh();
   darkQuery.addEventListener('change', refresh);
+  // 裏のタブには change が遅れて届くことがある。表に出たときと、
+  // bfcache から戻ったときにも読み直して、古い表示が残らないようにする
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') refresh();
+  });
+  window.addEventListener('pageshow', refresh);
   try {
     onStateChanged(apply);
   } catch {
