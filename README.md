@@ -1,4 +1,4 @@
-# Auto Dark Mode for Gmail & Sheets
+# Auto Dark Mode for Gmail™ & Google Sheets™
 
 端末のダークモード設定に合わせて、Gmail と Google スプレッドシートを暗く表示する Chrome 拡張機能です。
 
