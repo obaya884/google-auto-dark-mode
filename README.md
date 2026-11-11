@@ -57,7 +57,6 @@ Chrome の「デザイン」の設定でライトかダークを選んでいる�
 ├── test/               # jest のテスト
 ├── _locales/           # 翻訳ファイル (i18n)
 ├── icons/              # 拡張機能アイコン
-├── docs/superpowers/   # 設計書と実装計画
 ├── manifest.json       # 拡張機能の設定ファイル
 ├── webpack.config.js   # Webpack 設定
 └── tsconfig.json       # TypeScript 設定
