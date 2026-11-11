@@ -1,0 +1,38 @@
+{
+    "appName": {
+        "message": "Auto Dark Mode for Gmail & Sheets",
+        "description": "Name of the extension"
+    },
+    "appDesc": {
+        "message": "Shows Gmail and Google Sheets in dark mode, following your device's dark mode setting.",
+        "description": "Description of the extension"
+    },
+    "currentDark": {
+        "message": "Showing: Dark",
+        "description": "Popup: the pages are currently shown dark"
+    },
+    "currentLight": {
+        "message": "Showing: Light",
+        "description": "Popup: the pages are currently shown light"
+    },
+    "switchToDark": {
+        "message": "Switch to dark",
+        "description": "Popup: button that temporarily switches to dark"
+    },
+    "switchToLight": {
+        "message": "Switch to light",
+        "description": "Popup: button that temporarily switches to light"
+    },
+    "overrideNote": {
+        "message": "Returns to the device setting when the device setting changes.",
+        "description": "Popup: note under the switch button"
+    },
+    "siteGmail": {
+        "message": "Use on Gmail",
+        "description": "Popup: per-site toggle for Gmail"
+    },
+    "siteSheets": {
+        "message": "Use on Google Sheets",
+        "description": "Popup: per-site toggle for Google Sheets"
+    }
+}

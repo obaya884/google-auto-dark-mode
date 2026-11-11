@@ -1,0 +1,31 @@
+/*
+ * 画面全体の色を反転して暗くする。
+ * - <html> に data-auto-dark がなければ、端末の設定（prefers-color-scheme）に従う。
+ * - data-auto-dark="dark" なら端末の設定にかかわらず反転し、"light" なら反転しない。
+ * 属性はコンテンツスクリプト（content.ts）が、端末の設定と違う表示にするときだけ付ける。
+ * 印刷に影響させないため、すべて @media screen の中に書く。
+ */
+
+@media screen and (prefers-color-scheme: dark) {
+  html:not([data-auto-dark="light"]) {
+    filter: invert(1) hue-rotate(180deg) !important;
+    /* ページの CSS が読み込まれる前の下地も反転の対象にするため、背景色を明示する */
+    background-color: #fff !important;
+  }
+
+  /* 画像と動画は、もう一度反転して元の色に戻す */
+  html:not([data-auto-dark="light"]) :is(img, video) {
+    filter: invert(1) hue-rotate(180deg) !important;
+  }
+}
+
+@media screen {
+  html[data-auto-dark="dark"] {
+    filter: invert(1) hue-rotate(180deg) !important;
+    background-color: #fff !important;
+  }
+
+  html[data-auto-dark="dark"] :is(img, video) {
+    filter: invert(1) hue-rotate(180deg) !important;
+  }
+}

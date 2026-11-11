@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #1f1f1f;
+  --muted: #5f6368;
+  --border: #dadce0;
+  --button-bg: #1f1f1f;
+  --button-fg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1f1f1f;
+    --fg: #e8eaed;
+    --muted: #9aa0a6;
+    --border: #3c4043;
+    --button-bg: #e8eaed;
+    --button-fg: #1f1f1f;
+  }
+}
+
+body {
+  width: 260px;
+  margin: 0;
+  padding: 14px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 13px/1.5 system-ui, sans-serif;
+}
+
+.current {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--button-bg);
+  color: var(--button-fg);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #4c8bf5;
+  outline-offset: 2px;
+}
+
+.note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+hr {
+  margin: 12px 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+}
