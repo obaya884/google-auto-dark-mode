@@ -13,8 +13,11 @@
     background-color: #fff !important;
   }
 
-  /* 画像と動画は、もう一度反転して元の色に戻す */
-  html:not([data-auto-dark="light"]) :is(img, video) {
+  /*
+   * 画像と動画は、もう一度反転して元の色に戻す。
+   * Gmail の左上のロゴは暗い文字を含む画像なので、戻さずに反転したままにする。
+   */
+  html:not([data-auto-dark="light"]) :is(img, video):not([src*="logo_gmail"], a[title="Gmail"] > img) {
     filter: invert(1) hue-rotate(180deg) !important;
   }
 }
@@ -25,7 +28,7 @@
     background-color: #fff !important;
   }
 
-  html[data-auto-dark="dark"] :is(img, video) {
+  html[data-auto-dark="dark"] :is(img, video):not([src*="logo_gmail"], a[title="Gmail"] > img) {
     filter: invert(1) hue-rotate(180deg) !important;
   }
 }
